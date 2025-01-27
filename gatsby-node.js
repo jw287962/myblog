@@ -1,20 +1,15 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/
- */
+const path = require(`path`);
+const { createFilePath } = require(`gatsby-source-filesystem`);
 
-const path = require(`path`)
-const { createFilePath } = require(`gatsby-source-filesystem`)
+// Define the templates for blog posts
+const blogPost = path.resolve(`./src/templates/blog-post.js`);
 
-// Define the template for blog post
-const blogPost = path.resolve(`./src/templates/blog-post.js`)
 
 /**
  * @type {import('gatsby').GatsbyNode['createPages']}
  */
 exports.createPages = async ({ graphql, actions, reporter }) => {
-  const { createPage } = actions
+  const { createPage } = actions;
 
   // Get all markdown blog posts sorted by date
   const result = await graphql(`
@@ -25,65 +20,69 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           fields {
             slug
           }
+          frontmatter {
+            category
+          }
         }
       }
     }
-  `)
+  `);
 
   if (result.errors) {
     reporter.panicOnBuild(
       `There was an error loading your blog posts`,
       result.errors
-    )
-    return
+    );
+    return;
   }
 
-  const posts = result.data.allMarkdownRemark.nodes
+  const posts = result.data.allMarkdownRemark.nodes;
 
   // Create blog posts pages
-  // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
-  // `context` is available in the template as a prop and as a variable in GraphQL
-
   if (posts.length > 0) {
     posts.forEach((post, index) => {
-      const previousPostId = index === 0 ? null : posts[index - 1].id
-      const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id
+      const previousPostId = index === 0 ? null : posts[index - 1].id;
+      const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id;
+
+      // Determine the template based on the category
+      const template = 
+                       blogPost;
 
       createPage({
-        path: post.fields.slug,
+        path: post.fields.slug, // e.g., /spiritual/my-post or /physical/my-post
         component: blogPost,
         context: {
           id: post.id,
           previousPostId,
           nextPostId,
         },
-      })
-    })
+      });
+    });
   }
-}
+};
 
 /**
  * @type {import('gatsby').GatsbyNode['onCreateNode']}
  */
 exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions
+  const { createNodeField } = actions;
 
   if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode })
+    const value = createFilePath({ node, getNode });
 
     createNodeField({
       name: `slug`,
       node,
       value,
-    })
+    });
   }
-}
+};
 
 /**
  * @type {import('gatsby').GatsbyNode['createSchemaCustomization']}
  */
 exports.createSchemaCustomization = ({ actions }) => {
-  const { createTypes } = actions
+  const { createTypes } = actions;
 
   // Explicitly define the siteMetadata {} object
   // This way those will always be defined even if removed from gatsby-config.js
@@ -116,10 +115,11 @@ exports.createSchemaCustomization = ({ actions }) => {
       title: String
       description: String
       date: Date @dateformat
+      category: String
     }
 
     type Fields {
       slug: String
     }
-  `)
-}
+  `);
+};

@@ -11,13 +11,13 @@ module.exports = {
   siteMetadata: {
     title: `Gatsby Starter Blog`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Jason-`,
+      summary: `A regular guy navigating life, exploring what it means to be a man without a clear blueprint. Through inner struggles, mistakes, and growth, I’m on a journey to find meaning, build self-worth, and define greatness on my own terms—not through people-pleasing, but through personal evolution. Along the way, I share insights from my physical journey (like dunking and fitness) and spiritual growth. Two paths, one mission: becoming the best version of myself.`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `jaxeub`,
     },
   },
   plugins: [
@@ -25,8 +25,15 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/blog`,
-        name: `blog`,
+        path: `${__dirname}/content/physical`,
+        name: `physical`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/spiritual`,
+        name: `spiritual`,
       },
     },
     {

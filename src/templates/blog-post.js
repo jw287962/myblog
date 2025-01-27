@@ -20,6 +20,7 @@ const BlogPostTemplate = ({
       >
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
+          <h3>{post.frontmatter?.category}</h3>
           <p>{post.frontmatter.date}</p>
         </header>
         <section
