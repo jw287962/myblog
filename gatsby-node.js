@@ -1,27 +1,24 @@
 const path = require(`path`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
-// Define the templates for blog posts
-const blogPost = path.resolve(`./src/templates/blog-post.js`);
+// Define templates for each category
+const spiritualPost = path.resolve(`./src/templates/spiritual.js`);
+const physicalPost = path.resolve(`./src/templates/physical.js`);
 
-
-/**
- * @type {import('gatsby').GatsbyNode['createPages']}
- */
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
 
-  // Get all markdown blog posts sorted by date
+  // Query all markdown files
   const result = await graphql(`
     {
       allMarkdownRemark(sort: { frontmatter: { date: ASC } }, limit: 1000) {
         nodes {
           id
-          fields {
-            slug
-          }
           frontmatter {
             category
+          }
+          fields {
+            slug
           }
         }
       }
@@ -29,41 +26,36 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   `);
 
   if (result.errors) {
-    reporter.panicOnBuild(
-      `There was an error loading your blog posts`,
-      result.errors
-    );
+    reporter.panicOnBuild(`There was an error loading your blog posts`, result.errors);
     return;
   }
 
   const posts = result.data.allMarkdownRemark.nodes;
 
-  // Create blog posts pages
-  if (posts.length > 0) {
-    posts.forEach((post, index) => {
-      const previousPostId = index === 0 ? null : posts[index - 1].id;
-      const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id;
+  // Create pages for each post
+  posts.forEach((post, index) => {
+    const previousPostId = index === 0 ? null : posts[index - 1].id;
+    const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id;
 
-      // Determine the template based on the category
-      const template = 
-                       blogPost;
+    // Determine the template based on the category
+    const template = post.frontmatter.category === "spiritual" ? spiritualPost :
+                     post.frontmatter.category === "physical" ? physicalPost :
+                     null;
 
+    if (template) {
       createPage({
-        path: post.fields.slug, // e.g., /spiritual/my-post or /physical/my-post
-        component: blogPost,
+        path: post.fields.slug, // e.g., /spiritual/my-post
+        component: template,
         context: {
           id: post.id,
           previousPostId,
           nextPostId,
         },
       });
-    });
-  }
+    }
+  });
 };
 
-/**
- * @type {import('gatsby').GatsbyNode['onCreateNode']}
- */
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
 
@@ -78,34 +70,11 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   }
 };
 
-/**
- * @type {import('gatsby').GatsbyNode['createSchemaCustomization']}
- */
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions;
 
-  // Explicitly define the siteMetadata {} object
-  // This way those will always be defined even if removed from gatsby-config.js
-
-  // Also explicitly define the Markdown frontmatter
-  // This way the "MarkdownRemark" queries will return `null` even when no
-  // blog posts are stored inside "content/blog" instead of returning an error
+  // Define the schema for MarkdownRemark
   createTypes(`
-    type SiteSiteMetadata {
-      author: Author
-      siteUrl: String
-      social: Social
-    }
-
-    type Author {
-      name: String
-      summary: String
-    }
-
-    type Social {
-      twitter: String
-    }
-
     type MarkdownRemark implements Node {
       frontmatter: Frontmatter
       fields: Fields

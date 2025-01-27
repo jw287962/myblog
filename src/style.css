@@ -60,8 +60,14 @@
   --color-accent: #d1dce5;
 }
 
+
+
 /* HTML elements */
 
+
+.navLinks >a{ 
+  padding: 10px;
+}
 *,
 :after,
 :before {
