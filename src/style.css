@@ -67,7 +67,11 @@
 
 .navLinks >a{ 
   padding: 10px;
+  outline: none;
+  text-decoration: none;
+  font-size: medium;
 }
+
 *,
 :after,
 :before {
@@ -287,7 +291,7 @@ a:focus {
   font-weight: var(--fontWeight-bold);
   font-family: var(--font-heading);
   text-decoration: none;
-  font-size: var(--fontSize-2);
+  font-size: var(--fontSize-4);
 }
 
 .bio {

@@ -1,18 +1,18 @@
-import * as React from "react"
-import { Link, graphql } from "gatsby"
+import * as React from "react";
+import { Link, graphql } from "gatsby";
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import Bio from "../components/bio";
+import Layout from "../components/layout"; // Ensure Layout is imported
+import Seo from "../components/seo";
 
-const PhysicalPost = ({
+const PhysicalPostTemplate = ({
   data: { previous, next, site, markdownRemark: post },
   location,
 }) => {
-  const siteTitle = site.siteMetadata?.title || `Title`
+  const siteTitle = site.siteMetadata?.title || `Title`;
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} title={siteTitle}> {/* Ensure Layout is used */}
       <article
         className="blog-post"
         itemScope
@@ -59,22 +59,13 @@ const PhysicalPost = ({
         </ul>
       </nav>
     </Layout>
-  )
-}
+  );
+};
 
-export const Head = ({ data: { markdownRemark: post } }) => {
-  return (
-    <Seo
-      title={post.frontmatter.title}
-      description={post.frontmatter.description || post.excerpt}
-    />
-  )
-}
-
-export default PhysicalPost
+export default PhysicalPostTemplate;
 
 export const pageQuery = graphql`
-  query BlogPostBySlug(
+  query SpiritualPostBySlug(
     $id: String!
     $previousPostId: String
     $nextPostId: String
@@ -92,6 +83,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        category
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
@@ -111,4 +103,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
