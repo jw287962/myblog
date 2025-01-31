@@ -1,14 +1,23 @@
 ---
-title: My Second Post!
-date: "2015-05-06T23:46:37.121Z"
+title: From Self-Doubt to Dunking Dreams: How I Learned to Fly (And You Can Too)
+date: "2025-01-31T22:40:32.169Z"
+description: ""
 category: "spiritual"
 ---
+TEST
 
-Wow! I love blogging so much already.
+---
 
-Did you know that "despite its name, salted duck eggs can also be made from
-chicken eggs, though the taste and texture will be somewhat different, and the
-egg yolk will be less rich."?
-([Wikipedia Link](https://en.wikipedia.org/wiki/Salted_duck_egg))
+### **Why Share My Story?**
 
-Yeah, I didn't either.
+Because heroes aren’t born in movies. They’re forged in garages, gyms, and quiet moments of choosing courage over comfort. Your turn.
+
+**Next Post Teaser:**  
+*“How Childhood Trauma Shaped My Fitness Journey (And How to Heal Through Movement).”*
+
+
+
+---
+
+**CTA:**  
+*“Tag someone who needs this. And if you’ve ever doubted your ‘vertical’ in life, drop a 🏀 below. Let’s rise.”*

@@ -2,7 +2,7 @@ import * as React from "react";
 import { Link, graphql } from "gatsby";
 
 import Bio from "../components/bio";
-import Layout from "../components/layout"; // Ensure Layout is imported
+import Layout from "../components/layout";
 import Seo from "../components/seo";
 
 const SpiritualPostTemplate = ({
@@ -12,7 +12,11 @@ const SpiritualPostTemplate = ({
   const siteTitle = site.siteMetadata?.title || `Title`;
 
   return (
-    <Layout location={location} title={siteTitle}> {/* Ensure Layout is used */}
+    <Layout location={location} title={siteTitle}>
+      <Seo
+        title={post.frontmatter.title}
+        description={post.frontmatter.description || post.excerpt}
+      />
       <article
         className="blog-post"
         itemScope

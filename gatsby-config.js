@@ -9,7 +9,7 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `My Spiritual & Physical Journey`,
+    title: `My Inner Journey`,
     author: {
       name: `Jason -`,
       summary: `A regular guy navigating life, exploring what it means to be a man without a clear blueprint. Through inner struggles, mistakes, and growth, I’m on a journey to find meaning, build self-worth, and define greatness on my own terms—not through people-pleasing, but through personal evolution. Along the way, I share insights from my physical journey (like dunking and fitness) and spiritual growth. Two paths, one mission: becoming the best version of myself.`,
