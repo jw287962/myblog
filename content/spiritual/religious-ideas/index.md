@@ -1,6 +1,6 @@
 ---
 title: "Finding My Own Path: Thoughts on Religion, Faith, and Living with Purpose"
-date: "2025-01-31T15:40:32.169Z"
+date: "2025-02-08T15:12:21Z"
 description: "Exploring religion, faith, and purpose without fear—this is my journey through Christianity, Buddhism, and personal reflection. Discover how to live with intention, kindness, and joy, beyond dogma and control. Join me in seeking wisdom and building a community rooted in love, not fear. 🌱🙏"
 category: "spirituality"
 ---
