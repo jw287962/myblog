@@ -93,7 +93,7 @@ This isn’t just my journey. It’s yours too. Let’s redefine what’s possib
 Because heroes aren’t born in movies. They’re forged in garages, gyms, and quiet moments of choosing courage over comfort. Your turn.
 
 **Next Post Teaser:**  
-*“How Childhood Trauma Shaped My Fitness Journey (And How to Heal Through Movement).”*
+*“Finding My Own Path: Thoughts on Religion, Faith, and Living with Purpose.”*
 
 
 
