@@ -1,6 +1,6 @@
 ---
 title: "My Values & Purpose (WIP)"
-date: "2025-02-08T15:12:22Z"
+date: "2025-02-13T03:35:41Z"
 description: "Finding My Values, Core Beliefs, and purpose to live and abide by."
 category: "spiritual"
 ---
@@ -11,64 +11,59 @@ category: "spiritual"
 
 ## Core Beliefs/Values
 
-1) Integrity:
+1. **Integrity**  
+- Speak and act truthfully, even when it's difficult  
+- Align words with actions and take accountability for mistakes  
 
-Speak and act truthfully, even when it's difficult.
-Align words with actions and take accountability for mistakes.
-2) Growth & Learning:
+2. **Growth & Learning**  
+- Embrace challenges as opportunities for personal development  
+- Continuously seek wisdom, knowledge, and self-awareness  
 
-Embrace challenges as opportunities for personal development.
-Continuously seek wisdom, knowledge, and self-awareness.
-3) Compassion & Respect:
+3. **Compassion & Respect**  
+- Treat everyone with kindness and dignity, regardless of differences  
+- Strive to understand others' perspectives with empathy  
 
-Treat everyone with kindness and dignity, regardless of differences.
-Strive to understand others' perspectives and approach situations with empathy.
-4) Courage:
+4. **Courage**  
+- Stand up for yourself and others when it's right to do so  
+- Face fears and pursue meaningful goals  
+- Engage in uncomfortable but necessary conversations  
 
-Stand up for yourself and others when it's right to do so.
-Face fears and pursue meaningful goals without letting insecurity hold you back.
-Engage in uncomfortable but necessary conversations.
-5) Spirituality & Purpose:
+5. **Spirituality & Purpose**  
+- Stay connected to spirituality as a source of strength  
+- Live with intention and make positive impacts  
+- Balance selfishness and selflessness  
 
-Stay connected to spirituality as a source of strength and guidance.
-Live with intention and a sense of purpose, striving to make a positive impact.
-Avoid selfish pursuits and immediate gratification that compromise long-term growth.
-Remember to balance selfishness and selflessness.
-6) Freedom & Financial Responsibility:
+6. **Freedom & Financial Responsibility**  
+- Use money as a tool for freedom, not material gain  
+- Maintain financial literacy for long-term goals  
 
-Use money as a tool for freedom, not material gain.
-Maintain financial literacy and make thoughtful decisions aligned with long-term goals.
-7) Balance & Moderation:
+7. **Balance & Moderation**  
+- Balance ambition with rest  
+- Cultivate joy while staying true to values  
 
-Balance ambition with rest and freedom with responsibility.
-Cultivate joy and meaningful connections while staying true to your values.
-8) Love & Family:
+8. **Love & Family**  
+- *Presence & Support:*  
+    Be fully engaged, offer emotional support, prioritize quality time  
+- *Proactive Love & Leadership:*  
+    Initiate romance through words, gestures, and planned moments  
+- *Attuned Understanding & Growth:*  
+    Continuously learn your partner's needs and love languages  
+- *Unconditional Commitment:*  
+    Choose love as daily action, weather challenges with patience  
 
-- **Presence & Support:**
-Be fully engaged with family members, offering emotional support and actively listening without judgment. Prioritize quality time together while respecting individual needs for personal space.
+9. **Emotional Control**  
+- Use emotions as guides without letting them dominate  
+- Avoid impulsive reactions through mindful breathing  
+- Never yell or act out of anger  
 
-- **Proactive Love & Leadership:**
-Take initiative in nurturing romance and connection. Regularly express affection through words ("I love you"), gestures (flowers, hugs), and planned moments (dates, meaningful conversations). Lead with passion and intentionality to keep the relationship vibrant.
+10. **Presence & Abundance Mindset**  
+    - Practice daily gratitude  
+    - Share resources freely and celebrate others' successes  
+    - Prioritize relationships over material gains  
+    - Savor present moments while working toward goals  
 
-- **Attuned Understanding & Growth:**
-Be a lifelong student of your partner's inner world – their needs, fears, dreams, and love languages. Cultivate empathy through active observation and curiosity, adapting your actions to support their growth and emotional well-being.
-
-- **Unconditional Commitment:**
-Choose love as a daily action, not just a feeling. Weather challenges with patience, address conflicts calmly, and reaffirm your dedication through both words and consistent effort.
-9) Emotional Control:
-
-Use emotions as a guide without letting them take control.
-Avoid reacting impulsively by breathing, thinking, and acting calmly.
-Never yell or act out of anger.
-10) Presence & Abundance Mindset
-
-Acknowledging gratitude in life, big or small.
-Share time/resources freely—abundance grows through generosity.  
-Reject comparison; celebrate others’ successes as proof of life’s possibilities.  
-Savor the present moment. Find humor in imperfections and joy in ordinary experiences.
-Prioritize relationships and experiences over material gains.  
-Work toward goals without attaching happiness to future outcomes. 
 ---
+
 
 ## Purpose
 #### My Mission
